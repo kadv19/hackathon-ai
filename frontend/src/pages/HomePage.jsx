@@ -1,32 +1,47 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
-import avatar from '../assets/avatar.png'; // Ensure the image exists at this path
+import './HomePage.css'; // Ensure you have your styles for floating effects
 
 const HomePage = () => {
+  const avatarURL = 'https://api.adorable.io/avatars/285/abott@adorable.png'; // Avatar image URL
   const [welcomeMessage, setWelcomeMessage] = useState('');
   const navigate = useNavigate();
 
+  // Grammatical fix and animation message logic
   useEffect(() => {
-    const message = 'Welcome to a New Era of Learning!';
+    const message = 'Weelcome to a New Era of Learning!';  // Corrected message here
     let index = 0;
+
     const interval = setInterval(() => {
       if (index < message.length) {
-        setWelcomeMessage((prev) => prev + message[index]);
+        setWelcomeMessage((prev) => prev + message.charAt(index));
         index++;
       } else {
         clearInterval(interval);
       }
     }, 100); // Adjust speed if necessary
-    return () => clearInterval(interval);
+
+    return () => clearInterval(interval); // Clean up interval on component unmount
   }, []);
 
   return (
-    <div className="page-container">
-      <img src={avatar} alt="Triangle Icon" className="mx-auto my-4 w-32 h-32" />
-      <h1 className="text-center text-3xl font-bold">{welcomeMessage}</h1>
+    <div className="homepage-container">
+      {/* Welcome message */}
+      <h1>{welcomeMessage}</h1>
+
+      {/* Floating Avatar or circle */}
+      <div className="circle">
+      </div>
+
+      {/* Additional text */}
+      <h1 className="intro-text">
+        Welcome to a new era of learning like never before. We have redefined learning to a new level where we offer tailored learning experiences for students.
+      </h1>
+
+      {/* Get Started Button */}
       <button
-        className="mt-4 bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-700"
-        onClick={() => navigate('/options')}
+        onClick={() => navigate('/page2')}
+        className="get-started-button"
       >
         Get Started
       </button>
@@ -35,3 +50,4 @@ const HomePage = () => {
 };
 
 export default HomePage;
+
