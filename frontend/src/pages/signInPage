@@ -1,0 +1,59 @@
+import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
+
+const SignInPage = () => {
+  const navigate = useNavigate();
+  const [username, setUsername] = useState('');
+  const [grade, setGrade] = useState('');
+
+  const handleGoogleSignIn = () => {
+    navigate('/subjects');
+  };
+
+  const handleUniversitySignIn = () => {
+    const email = prompt('Enter your college email:');
+    if (email && email.includes('@')) {
+      navigate('/subjects');
+    } else {
+      alert('The given mail ID is not authentic');
+    }
+  };
+
+  return (
+    <div className="page-container bg-gradient-to-r from-purple-500 to-blue-500 h-screen flex flex-col items-center justify-center text-white">
+      <h2 className="text-2xl font-bold mb-4">Sign In</h2>
+      <form className="flex flex-col gap-4">
+        <input
+          type="text"
+          placeholder="Username"
+          className="input-field"
+          value={username}
+          onChange={(e) => setUsername(e.target.value)}
+        />
+        <input
+          type="text"
+          placeholder="Grade (11th or 12th)"
+          className="input-field"
+          value={grade}
+          onChange={(e) => setGrade(e.target.value)}
+        />
+        <button
+          type="button"
+          className="bg-white text-purple-700 px-6 py-3 rounded-md font-semibold hover:bg-purple-300"
+          onClick={handleGoogleSignIn}
+        >
+          Sign In with Google
+        </button>
+        <button
+          type="button"
+          className="bg-white text-purple-700 px-6 py-3 rounded-md font-semibold hover:bg-purple-300"
+          onClick={handleUniversitySignIn}
+        >
+          Sign In with University Email
+        </button>
+      </form>
+    </div>
+  );
+};
+
+export default SignInPage;
