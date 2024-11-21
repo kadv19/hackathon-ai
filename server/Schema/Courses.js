@@ -1,5 +1,6 @@
 import  mongoose , { Schema } from "mongoose";
 
+
 const courseschema = mongoose.Schema({
      courseid : {
         type : String,
@@ -16,12 +17,12 @@ const courseschema = mongoose.Schema({
      },
 
      category : {
-        type : String
+        type : [],
      },
 
-     lessos : {
+     lessons : {
         type : [],
-        
+    
      }
 
 
