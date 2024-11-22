@@ -5,7 +5,7 @@ import './Page2.css'; // Separate CSS file for styling Page 2
 const Page2 = () => {
   const navigate = useNavigate();
 
-  const [isLogin, setIsLogin] = useState(true); // Track login/signup state
+  const [isLogin, setIsLogin] = useState(true); // Track SignIn/SignUp state
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [confirmPassword, setConfirmPassword] = useState('');
@@ -15,18 +15,18 @@ const Page2 = () => {
   const [lastName, setLastName] = useState('');
   const [phoneNumber, setPhoneNumber] = useState('');
 
-  // Form submit handler (Login/Sign-Up)
+  // Form submit handler (SignIn/Sign-Up)
   const handleSubmit = (e) => {
     e.preventDefault();
     if (isLogin) {
-      // Handle Login logic here (authentication)
-      console.log('Logging in with:', email, password);
-      navigate('/home'); // Redirect after login
+      // Handle SignIn logic here (authentication)
+      console.log('Signing in with:', email, password);
+      navigate('/home'); // Redirect after SignIn
     } else {
       // Handle Sign-Up logic here (validation and creation)
       if (password === confirmPassword) {
         console.log('Signing up with:', firstName, lastName, email, phoneNumber, password);
-        navigate('/home'); // Redirect after sign-up
+        navigate('/home'); // Redirect after Sign-Up
       } else {
         alert('Passwords do not match!');
       }
@@ -39,19 +39,16 @@ const Page2 = () => {
         // Options Page
         <div className="options-container">
           <button onClick={() => setIsLogin(true)} className="options-button">
-            Login
-          </button>
-          <button onClick={() => setIsLogin(false)} className="options-button">
-            Sign In
+            SignIn
           </button>
           <p className="signup-text">
-            Don't have an account? <span onClick={() => navigate('/sign-up')} className="signup-link">Sign Up here!</span>
+            Don't have an account? <span onClick={() => setIsLogin(false)} className="signup-link">Sign Up here!</span>
           </p>
         </div>
       ) : (
-        // Login/SignUp Forms
+        // SignIn/SignUp Forms
         <div>
-          <h1>{isLogin ? 'Login' : 'Sign Up'}</h1>
+          <h1>{isLogin ? 'SignIn' : 'Sign Up'}</h1>
           
           <form onSubmit={handleSubmit} className="form-container">
             <div className="input-group">
@@ -128,7 +125,7 @@ const Page2 = () => {
             )}
 
             <button type="submit" className="submit-button">
-              {isLogin ? 'Login' : 'Sign Up'}
+              {isLogin ? 'SignIn' : 'Sign Up'}
             </button>
           </form>
 
@@ -139,7 +136,7 @@ const Page2 = () => {
               </p>
             ) : (
               <p className="signup-text">
-                Already have an account? <span onClick={() => setIsLogin(true)} className="signup-link">Login here!</span>
+                Already have an account? <span onClick={() => setIsLogin(true)} className="signup-link">SignIn here!</span>
               </p>
             )}
           </div>

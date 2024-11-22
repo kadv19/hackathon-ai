@@ -1,0 +1,112 @@
+/* Apply gradient background to the entire page */
+body {
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(135deg, #feb47b, #ff7e5f); 
+    min-height: 100vh; /* Ensure background covers full height */
+  }
+  
+  /* Container holding both course list and image */
+  .math-grade11-container {
+    display: flex;
+    justify-content: space-between;
+    padding: 0; /* Remove padding to eliminate partition */
+    flex-wrap: wrap; /* Allows responsiveness on smaller screens */
+    min-height: 100vh;
+  }
+  
+  .course-list {
+    width: 30%; /* Make the course list smaller */
+    background: linear-gradient(135deg, #feb37b, #ff7e4f); /* Lighter background */
+    padding: 20px;
+  }
+  
+  .course-list ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .course-list li {
+    margin-bottom: 10px;
+  }
+  
+  .course-list button {
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    padding: 10px;
+    width: 100%;
+    cursor: pointer;
+    text-align: left;
+    font-size: 16px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+  }
+  
+  .course-list button:hover {
+    background-color: #45a049;
+  }
+  
+  .highlighted-heading {
+    font-size: 24px;
+    font-weight: bold;
+    text-decoration: underline;
+    color: #4caf50;
+  }
+  
+  .image-container {
+    width: 70%; /* Make the image side the majority */
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; /* Align items to the top */
+    background: linear-gradient(135deg, #feb47b, #ff7e5f); /* Slightly darker background */
+    padding: 20px;
+    flex-direction: column;
+  }
+  
+  .mathematician-image {
+    width: 100%; /* Make the image take full width of the container */
+    height: auto;
+    max-width: 80%; /* Prevent it from exceeding 80% of the container width */
+    border-radius: 8px;
+  }
+  
+  .course-topics {
+    width: 100%;
+    text-align: center; /* Center align the topics */
+    margin-bottom: 20px; /* Space between topics and image */
+  }
+  
+  .course-topics h3 {
+    font-size: 22px;
+    margin-bottom: 15px;
+  }
+  
+  .course-topics ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .course-topics li {
+    margin-bottom: 10px;
+    font-size: 18px;
+  }
+  
+  /* Media Query for responsiveness */
+  @media (max-width: 768px) {
+    .math-grade11-container {
+      flex-direction: column; /* Stack elements vertically on smaller screens */
+      padding: 10px;
+    }
+  
+    .course-list,
+    .image-container {
+      width: 100%; /* Full width on smaller screens */
+      margin-bottom: 20px;
+    }
+  
+    .mathematician-image {
+      max-width: 90%; /* Ensure images are appropriately sized on smaller screens */
+    }
+  }
+  

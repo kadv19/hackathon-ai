@@ -1,74 +1,60 @@
-.homepage-container {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  background: linear-gradient(135deg, #ff7e5f, #feb47b); /* Colorful gradient background */
-  text-align: center;
-  font-family: 'Arial', sans-serif;
-  position: relative;
-  overflow: hidden;
-}
-
-.circle {
-  width: 100px;
-  height: 100px;
-  border-radius: 50%;
-  background-color: #00bcd4; /* Subtle contrast with light teal color */
-  margin-bottom: 20px;
-  animation: hoverAnimation 3s infinite;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.avatar {
-  width: 60px;
-  height: 60px;
-  border-radius: 50%;
-}
-
-@keyframes hoverAnimation {
-  0% {
-    transform: translateY(0);
+.home-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(135deg, #feb47b, #ff7e5f); /* Soft gradient similar to Page2 */
+    text-align: center;
+    font-family: 'Arial', sans-serif;
+    color: #fff; /* Ensure all text is white for contrast */
   }
-  50% {
-    transform: translateY(-15px);
+  
+  h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Slight shadow for readability */
   }
-  100% {
-    transform: translateY(0);
+  
+  .welcome-message {
+    font-size: 1.2rem;
+    margin: 10px 0;
+    max-width: 600px;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
   }
-}
-
-h1 {
-  font-size: 2rem;
-  color: #fff; /* White color for the title */
-  font-weight: bold;
-  margin-bottom: 20px;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Shadow effect for better readability */
-}
-
-.intro-text {
-  font-size: 1.2rem;
-  color: #fff; /* White text for intro */
-  margin: 10px 0;
-  padding: 0 15px;
-  max-width: 600px;
-  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3); /* Shadow effect for text */
-}
-
-.get-started-button {
-  padding: 10px 20px;
-  background-color: #008cba;
-  color: white;
-  font-size: 1rem;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-.get-started-button:hover {
-  background-color: #005f6b;
-}
+  
+  .quote {
+    font-size: 1.1rem;
+    font-style: italic;
+    margin: 20px 0;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+  }
+  
+  .quote-author {
+    display: block;
+    margin-top: 10px;
+    font-weight: bold;
+    font-size: 1rem;
+  }
+  
+  .button-container {
+    margin-top: 30px;
+  }
+  
+  .study-button {
+    padding: 10px 20px;
+    margin: 10px;
+    font-size: 1rem;
+    background-color: #008cba; /* Blue button for contrast */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .study-button:hover {
+    background-color: #005f6b; /* Darker shade on hover */
+  }
+  

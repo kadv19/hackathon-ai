@@ -1,0 +1,85 @@
+.technology-page-container {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    background: linear-gradient(135deg, #feb47b, #ff7e5f);
+  }
+  
+  .course-list {
+    width: 30%;
+    background-color: #e1f5e1;
+    padding: 20px;
+    border-radius: 8px;
+  }
+  
+  .course-list ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .course-list li {
+    margin-bottom: 10px;
+  }
+  
+  .course-list button {
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    padding: 10px;
+    width: 100%;
+    cursor: pointer;
+    text-align: left;
+    font-size: 16px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+  }
+  
+  .course-list button:hover {
+    background-color: #45a049;
+  }
+  
+  .highlighted-heading {
+    font-size: 24px;
+    font-weight: bold;
+    text-decoration: underline;
+    color: #4caf50;
+  }
+  
+  .image-container {
+    width: 70%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    background-color: #c8e6c9;
+    padding: 20px;
+    flex-direction: column;
+  }
+  
+  .technologist-image {
+    width: 100%;
+    height: auto;
+    max-width: 80%;
+    border-radius: 8px;
+  }
+  
+  .course-topics {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .course-topics h3 {
+    font-size: 22px;
+    margin-bottom: 15px;
+  }
+  
+  .course-topics ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .course-topics li {
+    margin-bottom: 10px;
+    font-size: 18px;
+  }
+  
